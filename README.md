@@ -21,14 +21,15 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
 |-------------|----------------|
 | Go version  | 1.17 or higher |
 
-## System Requirements 
+## Sistem gereksinimleri
+ 
 
 Düğüm türü başına sistem gereksinimleri için resmi belgeler sayfasına bakın: 
 * [Bridge](https://docs.celestia.org/nodes/bridge-validator-node#hardware-requirements)
 * [Light](https://docs.celestia.org/nodes/light-node#hardware-requirements)
 * [Full](https://docs.celestia.org/nodes/full-node#hardware-requirements)
 
-## Installation
+## Kurulum
 
 ```sh
 git clone https://github.com/celestiaorg/celestia-node.git 
