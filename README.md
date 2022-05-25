@@ -7,13 +7,13 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/celestiaorg/celestia-node)](https://goreportcard.com/report/github.com/celestiaorg/celestia-node)
 [![codecov](https://codecov.io/gh/celestiaorg/celestia-node/branch/main/graph/badge.svg?token=CWGA4RLDS9)](https://codecov.io/gh/celestiaorg/celestia-node)
 
-Golang implementation of Celestia's data availability node types (`light` | `full` | `bridge`).
+Celestia'nın veri kullanılabilirliği düğüm türlerinin (`hafif` |` tam` | `köprü`) Golang uygulaması.
 
-The celestia-node types described above comprise the celestia data availability (DA) network.
+Yukarıda açıklanan celestia düğümü türleri, celestia veri kullanılabilirliği (DA) ağını içerir.
 
-The DA network wraps the celestia-core consensus network by listening for blocks from the consensus network and making them digestible for data availability sampling (DAS).
+DA ağı, konsensüs ağından gelen blokları dinleyerek ve onları veri kullanılabilirliği örneklemesi (DAS) için sindirilebilir hale getirerek celestia çekirdekli konsensüs ağını sarar.
 
-Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-availability-sampling-light-clients) if you want to learn more about DAS and how it enables secure and scalable access to Celestia chain data.
+Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-availability-sampling-light-clients)DAS ve Celestia zincir verilerine nasıl güvenli ve ölçeklenebilir erişim sağladığı hakkında daha fazla bilgi edinmek istiyorsanız.
 
 ## Minimum requirements
 
@@ -23,7 +23,7 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
 
 ## System Requirements 
 
-See the official docs page for system requirements per node type: 
+Düğüm türü başına sistem gereksinimleri için resmi belgeler sayfasına bakın: 
 * [Bridge](https://docs.celestia.org/nodes/bridge-validator-node#hardware-requirements)
 * [Light](https://docs.celestia.org/nodes/light-node#hardware-requirements)
 * [Full](https://docs.celestia.org/nodes/full-node#hardware-requirements)
@@ -36,21 +36,21 @@ cd celestia-node
 make install
 ```
 
-For more information on setting up a node and the hardware requirements needed, go visit our docs at <https://docs.celestia.org>.
+Düğüm kurma ve gereken donanım gereksinimleri hakkında daha fazla bilgi için şu adresteki belgelerimizi ziyaret edin: <https://docs.celestia.org>.
 
 ## API docs
 
-Celestia-node public API is documented [here](https://docs.celestia.org/developers/node-api/).
+Celestia düğümü genel API'si belgelenmiştir [here](https://docs.celestia.org/developers/node-api/).
 
 ## Node types
 
-- **Bridge** nodes - relay blocks from the celestia consensus network to the celestia data availability (DA) network
-- **Full** nodes - fully reconstruct and store blocks by sampling the DA network for shares
-- **Light** nodes - verify the availability of block data by sampling the DA network for shares
+- **Bridge** nodes - celestia konsensüs ağından celestia veri kullanılabilirliği (DA) ağına röle blokları
+- **Full** nodes - paylaşımlar için DA ağını örnekleyerek blokları tamamen yeniden yapılandırın ve saklayın
+- **Light** nodes - paylaşımlar için DA ağını örnekleyerek blok verilerinin kullanılabilirliğini doğrulayın
 
-More information can be found [here](https://github.com/celestiaorg/celestia-node/blob/main/docs/adr/adr-003-march2022-testnet.md#legend).
+Daha fazla bilgi bulunabilir [here](https://github.com/celestiaorg/celestia-node/blob/main/docs/adr/adr-003-march2022-testnet.md#legend).
 
-## Run a node
+## Bir düğümü çalıştırın
 
 `<node_type>` can be `bridge`, `full` or `light`.
 
@@ -62,12 +62,12 @@ celestia <node_type> init
 celestia <node_type> start
 ```
 
-## Package-specific documentation
+## Pakete özel belgeler
 
 - [Header](./service/header/doc.go)
 - [Share](./service/share/doc.go)
 - [DAS](./das/doc.go)
 
-## Code of Conduct
+## Davranış kodu
 
-See our Code of Conduct [here](https://docs.celestia.org/community/coc).
+Davranış Kurallarımıza bakın [here](https://docs.celestia.org/community/coc).
